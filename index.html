@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Asendiente_LabAct1</title>
+</head>
+<body>
+    <div class="all">
+        <h2>SIMPLE CALCULATOR</h2>
+        <form action="" method="get">
+            <div class="num1">
+                <h3>FIRST NUM:</h3>
+                <input type="number" name="" id="num1">
+            </div>
+            <div class="num2">
+                <h3>SECOND NUM:</h3>
+                <input type="number" name="" id="num2">
+            </div>
+            <button type="button" onclick="mySum()">ADD</button>
+            <button type="button" onclick="mySub()">SUBTR</button>
+            <button type="button" onclick="myProd()">MULT</button>
+            <button type="button" onclick="myQuot()">DIVIDE</button>
+        </form>
+        <div class="result">
+            <h4>RESULT HERE:</h4>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function mySum(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let sum = parseInt(num1) + parseInt(num2);
+        document.getElementById('result').innerHTML = sum;
+    }
+    function mySub(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let diff = parseInt(num1) - parseInt(num2);
+        document.getElementById('result').innerHTML = diff;
+    }
+    function myProd(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let prod = parseInt(num1) * parseInt(num2);
+        document.getElementById('result').innerHTML = prod;
+    }
+    function myQuot(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let quot = parseInt(num1) / parseInt(num2);
+        document.getElementById('result').innerHTML = quot;
+    }
+</script>
+</html>
